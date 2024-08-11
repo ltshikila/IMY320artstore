@@ -141,7 +141,7 @@
   flex: 1;
   flex-direction: column;
   padding: 0 30px;
-  gap: 60px;
+  gap: 50px;
 }
 .logincontainer {
   width: 649px;
@@ -202,4 +202,5 @@
 .error{
   font-size: 14pt;
   color: rgb(237, 14, 14);
+  margin: 0;
 }

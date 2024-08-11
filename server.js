@@ -15,7 +15,7 @@ mongoose.connect('mongodb+srv://ltshikila17:d2HO4CGFT8kZDy40@imy320artstore.osue
     useNewUrlParser: true,
     useUnifiedTopology: true
   }).then(() =>{
-    console.log("db connection success");
+    console.log("Database connection successful");
   }).catch((error) =>{
     console.log("db connection error", error);
   });
@@ -26,6 +26,7 @@ app.listen(port, () => {
 
 const User = require("./models/user");
 
+//REGISTRATION 
 app.post("/register", async (req, res) => {
   try {
     const {username, email, password} = req.body;
@@ -57,6 +58,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
+//LOGIN
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
