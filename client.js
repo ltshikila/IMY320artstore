@@ -32,5 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Login error:", error);
       }
     });
+
+    // Toggle password visibility
+    togglePassword.addEventListener("click", () => {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+
+      // Toggle the eye icon
+      togglePassword.src = type === "password" ? "./public/eye.png" : "./public/eye_hide.png";
+    });
   });
   
