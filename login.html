@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+    />
+  </head>
+  <body class="login">
+    <div class="logincontainer">
+      <div class="form">
+        <div class="welcome-back-wrapper">
+          <h1 class="welcome-back">Welcome Back</h1>
+        </div>
+        <div class="inputs-outer">
+          <div class="inputs-inner">
+            <div class="email">
+              <input
+                class="enter-email"
+                placeholder="Enter Email"
+                type="text"
+              />
+            </div>
+            <div class="password">
+              <input
+                class="enter-password"
+                placeholder="Enter Password"
+                type="text"
+              />
+
+              <img class="eye-icon" alt="" src="./public/eye@2x.png" />
+            </div>
+          </div>
+          <div class="forgot-password">Forgot Password?</div>
+        </div>
+        <p class="error"></p>
+        <button class="loginbtn">
+          <div class="logintxt">Login</div>
+        </button>
+      </div>
+    </div>
+    <section class="sign-up-wrapper">
+      <a class="sign-up">Sign Up</a>
+    </section>
+
+    <script src="./client.js"></script>
+  </body>
+</html>
