@@ -167,7 +167,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/frame-1@3x.png);
+  background-image: url(../media/images/frame-1@3x.png);
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center;
