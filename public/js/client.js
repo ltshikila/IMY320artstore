@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         if (response.ok) {
           // Login successful, redirect to home.html
-          window.location.href = "home.html";
+          window.location.href = "index.html";
         } else {
           // Display error message
           errorElement.textContent = data.message || "Login failed. Please try again.";

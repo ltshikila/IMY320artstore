@@ -175,6 +175,16 @@ document.addEventListener("DOMContentLoaded", () => {
             wishlistIcon.src = product.wishlist ? "./media/images/wishliston.png" : "./media/images/wishlistoff.png";
         });
 
+        //Add event listener to go to product page
+
+        productElement.addEventListener("click", () => {
+            const productPage = document.getElementById("productpage");
+            //send the description through to the page. file name is product.html
+
+            localStorage.setItem("product", JSON.stringify(product));
+            window.location.href = "product.html";
+        });
+
         productlist.appendChild(productElement);
         });
 
