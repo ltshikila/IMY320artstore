@@ -38,11 +38,53 @@ body {
     border-radius: 50px;
     background-color: #000;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
     gap: 20px;
     box-sizing: border-box;
+}
+
+.search_input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-dropdown {
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0 0 10px 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    /* Hidden by default */
+    z-index: 1000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.search-dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.search-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.search-dropdown-item:hover {
+    background-color: #f0f0f0;
 }
 
 /* Search input */
@@ -61,6 +103,31 @@ body {
     height: 48px;
     width: 48px;
     cursor: pointer;
+}
+
+/* Custom scrollbar for search-dropdown */
+.search-dropdown::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+.search-dropdown::-webkit-scrollbar-track {
+    background: #333;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+}
+
+.search-dropdown::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+}
+
+.search-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color of the scrollbar thumb on hover */
 }
 
 .catalogue {
@@ -213,5 +280,5 @@ button, .increment_button, .decrement_button {
 .back-button img {
     width: 40px;
     height: 40px;
-    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(50%) contrast(2000%);
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
