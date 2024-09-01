@@ -14,16 +14,28 @@
       <a class="logo">MUSE</a>
     </div>
     <section class="header">
-      <div class="searchbar">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="start supply searching..."
-          aria-label="Search"
-        />
-        <img class="search-icon" alt="Search Icon" src="./media/images/search.png" />
+      <div class="searchandsort">
+        <div class="searchbar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="start supply searching..."
+            aria-label="Search"
+          />
+          <img class="search-icon" alt="Search Icon" src="./media/images/search.png" />
+        </div>
+        <div class="sort-dropdown">
+          <select id="sort-select" class="sort-select">
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+            <option value="price-asc">Price (ascending)</option>
+            <option value="price-desc">Price (descending)</option>
+          </select>
+        </div>
       </div>
+      
       <div class="product-catalogue">Product Catalogue</div>
+      
     </section>
     <div class="productslayout">
       <section class="productlist" id="productlist"></section>

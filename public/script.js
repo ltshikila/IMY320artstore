@@ -105,7 +105,8 @@ let products = [
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector(".search-input");
     const searchButton = document.querySelector(".search-icon");
-    
+    const sortSelect = document.querySelector("#sort-select");
+
     function fuzzySearch(term) {
       const lowerCaseTerm = term.toLowerCase();
   
@@ -114,7 +115,22 @@ document.addEventListener("DOMContentLoaded", () => {
         product.type.toLowerCase().includes(lowerCaseTerm)
       );
     }
-  
+    
+    function sortProducts(products, sortBy) {
+        switch (sortBy) {
+          case 'name-asc':
+            return products.sort((a, b) => a.name.localeCompare(b.name));
+          case 'name-desc':
+            return products.sort((a, b) => b.name.localeCompare(a.name));
+          case 'price-asc':
+            return products.sort((a, b) => a.price - b.price);
+          case 'price-desc':
+            return products.sort((a, b) => b.price - a.price);
+          default:
+            return products;
+        }
+    }
+
     function renderProducts(filteredProducts = products) {
         const productlist = document.getElementById("productlist");
         productlist.innerHTML = ""; // Clear existing products
@@ -168,7 +184,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleSearch() {
         const searchTerm = searchInput.value.trim();
         const filteredProducts = fuzzySearch(searchTerm);
-        renderProducts(filteredProducts);
+        const sortBy = sortSelect.value;
+        const sortedProducts = sortProducts(filteredProducts, sortBy);
+        renderProducts(sortedProducts);
     }
 
     // Set up the search functionality
@@ -178,6 +196,15 @@ document.addEventListener("DOMContentLoaded", () => {
         handleSearch();
         }
     });
+
+    sortSelect.addEventListener("change", () => {
+        const searchTerm = searchInput.value.trim();
+        const filteredProducts = fuzzySearch(searchTerm);
+        const sortBy = sortSelect.value;
+        const sortedProducts = sortProducts(filteredProducts, sortBy);
+        renderProducts(sortedProducts);
+    });
+
 
     function renderProductOfTheDay() {
         const potdSection = document.querySelector(".potd");
