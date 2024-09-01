@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector(".search-input");
     const searchButton = document.querySelector(".search-icon");
     const sortSelect = document.querySelector("#sort-select");
+    const productList = document.querySelector(".productlist");
 
     function fuzzySearch(term) {
       const lowerCaseTerm = term.toLowerCase();
@@ -116,6 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
     
+    function setScrollPos (){
+        if (localStorage.length > 0) {
+            const scrollPos = localStorage.getItem("scrollPos");
+            if (scrollPos) {
+                productList.scrollTop = scrollPos;
+            }
+            localStorage.clear();
+        }
+    }
+
     function sortProducts(products, sortBy) {
         switch (sortBy) {
           case 'name-asc':
@@ -180,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
         productElement.addEventListener("click", () => {
             const productPage = document.getElementById("productpage");
             //send the description through to the page. file name is product.html
-
+            const scrollPos = productList.scrollTop;
+            localStorage.setItem("scrollPos", scrollPos);
             localStorage.setItem("product", JSON.stringify(product));
             window.location.href = "product.html";
         });
@@ -188,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productlist.appendChild(productElement);
         });
 
+        setScrollPos();
         
     }
 

@@ -197,3 +197,21 @@ button, .increment_button, .decrement_button {
     min-width: 30px;
     text-align: center;
 }
+
+.back_btn {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.back-button{
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.back-button img {
+    width: 40px;
+    height: 40px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(50%) contrast(2000%);
+}
