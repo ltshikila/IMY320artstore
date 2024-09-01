@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muse Product Catalogue</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+</head>
+<body>
+  <div class="catalogue">
+    <div class="navigation">
+      <a class="logo">MUSE</a>
+    </div>
+    <section class="header">
+      <div class="searchbar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="start supply searching..."
+          aria-label="Search"
+        />
+        <img class="search-icon" alt="Search Icon" src="./media/images/search.png" />
+      </div>
+      <div class="product-catalogue">Product Catalogue</div>
+    </section>
+    <div class="productslayout">
+      <section class="productlist" id="productlist"></section>
+      <!-- Product of the Day Section -->
+      <section class="potd">
+        <label class="potd-heading">Product of the day</label>
+        <img class="potd-image" loading="lazy" alt="Product of the Day" />
+        <div class="potd-info">
+          <div class="potd-title"></div>
+          <div class="tpwishlist">
+            <div class="typeAndprice">
+              <div class="potd-type"></div>
+              <div class="potd-price"></div>
+            </div>
+            <button class="wishlist">
+              <img class="wishlisticon" src="./media/images/wishlist.png" alt="Wishlist" />
+            </button>
+          </div>
+          
+          
+        </div>
+      </section>
+    </div>
+    
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

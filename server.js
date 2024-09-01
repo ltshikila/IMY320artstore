@@ -22,9 +22,11 @@ mongoose.connect('mongodb+srv://ltshikila17:d2HO4CGFT8kZDy40@imy320artstore.osue
   }).catch((error) =>{
     console.log("db connection error", error);
   });
+
+  
 //Server connection
 app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+    console.log(`Server is listening on http://localhost:${port}`);
 });
 
 const User = require("./models/user");

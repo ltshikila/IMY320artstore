@@ -1,9 +1,10 @@
-const products = [
+let products = [
     {
         name: "14 Short Flat Daler Rowney Georgian Brush",
         type: "Paint brush",
         price: 345.00,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/G36Size14-rotated-1.jpg.webp",
+        wishlist: false,
         description:[
             "Oil painting calls for resilient, durable and sturdy hog bristle brushes that have good color retention and are easy to use.",
             "Daler-Rowney Georgian Brushes feature extra-fine quality Chungking bristles, with a high percentage of natural flags for maximum colour holding and smooth flexible strokes.",
@@ -20,6 +21,7 @@ const products = [
         type: "Mannequin",
         price: 130.00,
         image:"https://myartshop.co.za/wp-content/uploads/2023/09/12-pro-art-manikin-female-01.webp",
+        wishlist: false,
         description:[
             "The 12″ Pro Art Manikin Male is a fully adjustable manikin with a sturdy base and functioning, rotating joints.",
             "These manikins are an indispensable aid for drawing and sculpting because, without years of practice, depicting the human figure accurately can be extremely challenging. This manikin will help artists learn about posing, proportions, and light in terms of the human form.",
@@ -32,6 +34,7 @@ const products = [
         type: "Paint set",
         price: 155.00,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Oil12b.jpg.webp",
+        wishlist: false,
         description:[
             "Prime Art colour sets offer convenient, high quality artist colour in value for money assorted box sets",
             "Highly pigmented colours available in a 12ml tubes",
@@ -43,6 +46,7 @@ const products = [
         type: "Paint sets",
         price: 135.00,
         image:"https://myartshop.co.za/wp-content/uploads/2024/01/dala-glow-in-the-dark-apint-100ml.webp",
+        wishlist: false,
         description:[
             "Dala Glow in the Dark paint has a creamy consistency, is water soluble and non toxic.",
             "It has fantastic light emission in the dark and will also glow brightly under UV light.",
@@ -54,6 +58,7 @@ const products = [
         type: "Spray paint",
         price: 175.00,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Chestnut.jpg.webp",
+        wishlist: false,
         description:[
             "Ever wondered how to get that lovely chalky finish on your furniture and other interior decorative items?",
             "It provides an ultra-matt finish with a velvety appearance to give you the softened, vintage touch you desire",
@@ -68,6 +73,7 @@ const products = [
         type: "Easel",
         price: 599.00,
         image:"https://myartshop.co.za/wp-content/uploads/2023/01/Prime-Art-Compact-Wooden-Table-Easel-H-Frame-01.webp",
+        wishlist: false,
         description:[
             "The Prime Art Compact Wooden Table Easel – H Frame is a medium sized adjustable H-frame wooden table easel for small to medium sized canvas.",
             "It is made of Oiled Beechwood with Brass-plated hardware for long-lasting durability.",
@@ -84,6 +90,7 @@ const products = [
         type: "Canvas",
         price: 40.00,
         image:"https://myartshop.co.za/wp-content/uploads/2024/08/4-x-4-artboard-professional-box-canvas.webp",
+        wishlist: false,
         description:[
             "Artboard Professional Box Canvases are 380gsm, 100% cotton thick stretched canvas that are triple primed with acrylic gesso.",
             "These canvases offer you a true archival quality surface for your Oil or Acrylic paintings.",
@@ -94,3 +101,39 @@ const products = [
         ]
     }
   ];
+
+  function renderProducts() {
+    const productlist = document.getElementById('productlist');
+    products.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('item');
+        productElement.innerHTML = `
+            <div class="product-details">
+                <img class="image" src="${product.image}" alt="${product.name}" />
+                <div class="product-info">
+                    <div class="title">${product.name}</div>
+                    <div class="type">${product.type}</div>
+                    <div class="price">R${product.price.toFixed(2)}</div>
+                </div>
+            </div>
+            <button class="wishlist">
+                <img class="wishlisticon" src="./media/images/wishlist.png" alt="Wishlist" />
+            </button>
+        `;
+        productlist.appendChild(productElement);
+    });
+}
+
+renderProducts();
+
+// Function to display the "Product of the Day"
+function displayProductOfTheDay(product) {
+    document.querySelector('.potd-image').src = product.image;
+    document.querySelector('.potd-title').innerText = product.name;
+    document.querySelector('.potd-type').innerText = product.type;
+    document.querySelector('.potd-price').innerText = `R${product.price.toFixed(2)}`;
+  }
+  
+  // Load the last product as "Product of the Day"
+  const productOfTheDay = products[products.length - 1];
+  displayProductOfTheDay(productOfTheDay);
