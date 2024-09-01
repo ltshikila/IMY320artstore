@@ -100,40 +100,116 @@ let products = [
             "Artboard Professional Box Canvases are available in a variety of different sizes.",
         ]
     }
-  ];
+];
 
-  function renderProducts() {
-    const productlist = document.getElementById('productlist');
-    products.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('item');
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".search-input");
+    const searchButton = document.querySelector(".search-icon");
+    
+    function fuzzySearch(term) {
+      const lowerCaseTerm = term.toLowerCase();
+  
+      return products.filter((product) =>
+        product.name.toLowerCase().includes(lowerCaseTerm) ||
+        product.type.toLowerCase().includes(lowerCaseTerm)
+      );
+    }
+  
+    function renderProducts(filteredProducts = products) {
+        const productlist = document.getElementById("productlist");
+        productlist.innerHTML = ""; // Clear existing products
+        
+        if (filteredProducts.length === 0) {
+            // Display "No results found" message if no products match the search term
+            const noResultsElement = document.createElement("div");
+            noResultsElement.classList.add("no-results");
+            noResultsElement.textContent = "No results found";
+            productlist.appendChild(noResultsElement);
+            return;
+          }
+
+        filteredProducts.forEach((product) => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("item");
+
+        // Determine initial wishlist icon based on the product's wishlist status
+        const wishlistIconSrc = product.wishlist ? "./media/images/wishliston.png" : "./media/images/wishlistoff.png";
+
         productElement.innerHTML = `
             <div class="product-details">
-                <img class="image" src="${product.image}" alt="${product.name}" />
-                <div class="product-info">
-                    <div class="title">${product.name}</div>
-                    <div class="type">${product.type}</div>
-                    <div class="price">R${product.price.toFixed(2)}</div>
-                </div>
+            <img class="image" src="${product.image}" alt="${product.name}" />
+            <div class="product-info">
+                <div class="title">${product.name}</div>
+                <div class="type">${product.type}</div>
+                <div class="price">R${product.price.toFixed(2)}</div>
+            </div>
             </div>
             <button class="wishlist">
-                <img class="wishlisticon" src="./media/images/wishlist.png" alt="Wishlist" />
+            <img class="wishlisticon" src="${wishlistIconSrc}" alt="Wishlist" />
             </button>
         `;
+
+        const wishlistButton = productElement.querySelector(".wishlist");
+
+        // Add event listener to toggle wishlist status and icon
+        wishlistButton.addEventListener("click", () => {
+            product.wishlist = !product.wishlist; // Toggle wishlist status
+
+            const wishlistIcon = wishlistButton.querySelector(".wishlisticon");
+            wishlistIcon.src = product.wishlist ? "./media/images/wishliston.png" : "./media/images/wishlistoff.png";
+        });
+
         productlist.appendChild(productElement);
+        });
+
+        
+    }
+
+    function handleSearch() {
+        const searchTerm = searchInput.value.trim();
+        const filteredProducts = fuzzySearch(searchTerm);
+        renderProducts(filteredProducts);
+    }
+
+    // Set up the search functionality
+    searchButton.addEventListener("click", handleSearch);
+    searchInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+        handleSearch();
+        }
     });
-}
 
-renderProducts();
+    function renderProductOfTheDay() {
+        const potdSection = document.querySelector(".potd");
+        const potdProduct = products[products.length - 1]; // Assuming the last product in the array is the "Product of the Day"
 
-// Function to display the "Product of the Day"
-function displayProductOfTheDay(product) {
-    document.querySelector('.potd-image').src = product.image;
-    document.querySelector('.potd-title').innerText = product.name;
-    document.querySelector('.potd-type').innerText = product.type;
-    document.querySelector('.potd-price').innerText = `R${product.price.toFixed(2)}`;
-  }
+        // Set POTD details
+        potdSection.querySelector(".potd-image").src = potdProduct.image;
+        potdSection.querySelector(".potd-image").alt = potdProduct.name;
+        potdSection.querySelector(".potd-title").textContent = potdProduct.name;
+        potdSection.querySelector(".potd-type").textContent = potdProduct.type;
+        potdSection.querySelector(".potd-price").textContent = `R${potdProduct.price.toFixed(2)}`;
+
+        const potdWishlistButton = potdSection.querySelector(".wishlist");
+        const potdWishlistIcon = potdWishlistButton.querySelector(".wishlisticon");
+
+        // Set initial icon based on the wishlist status
+        potdWishlistIcon.src = potdProduct.wishlist ? "./media/images/wishliston.png" : "./media/images/wishlistoff.png";
+
+        // Add event listener to toggle wishlist status and icon
+        potdWishlistButton.addEventListener("click", () => {
+        potdProduct.wishlist = !potdProduct.wishlist; // Toggle wishlist status
+
+        if (potdProduct.wishlist) {
+            potdWishlistIcon.src = "./media/images/wishliston.png"; // Set to wishlist active icon
+        } else {
+            potdWishlistIcon.src = "./media/images/wishlistoff.png"; // Set to wishlist inactive icon
+        }
+        });
+    }
+
+    renderProducts(); // Initial render of all products
+    renderProductOfTheDay();
+});
   
-  // Load the last product as "Product of the Day"
-  const productOfTheDay = products[products.length - 1];
-  displayProductOfTheDay(productOfTheDay);
+  
