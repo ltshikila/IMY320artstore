@@ -7,14 +7,11 @@ body {
 .logo {
   text-decoration: none;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2.5vw; /* Responsive font size */
   color: inherit;
 }
 
 .navigation {
-  position: absolute;
-  top: 25px;
-  left: 50px;
   display: flex;
   align-items: center;
   font-family: 'Lexend Zetta';
@@ -23,7 +20,7 @@ body {
 /* Search bar container */
 .searchbar {
   margin: 20px;
-  width: 839px;
+  width: 100%;
   border-radius: 50px;
   background-color: #000;
   display: flex;
@@ -40,20 +37,21 @@ body {
   border: none;
   background: transparent;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5vw; /* Responsive font size */
   outline: none;
   font-weight: 500;
 }
 
 /* Search icon */
 .search-icon {
-  height: 48px;
-  width: 48px;
+  height: 2.5vw;
+  width: 2.5vw;
   cursor: pointer;
 }
+
 .product-catalogue {
   text-align: center;
-  font-size: 28px;
+  font-size: 2vw; /* Responsive font size */
   font-weight: 500;
   margin: 20px 0;
 }
@@ -76,11 +74,11 @@ body {
   scrollbar-width: none; 
 }
 
-.productslayout{
+.productslayout {
   display: flex;
   flex-direction: row;
-  gap:140px;
-  padding:0px 100px;
+  gap: 7.5%;
+  padding: 0px 5vw;
   width: 100%; 
   box-sizing: border-box;
 }
@@ -104,8 +102,8 @@ body {
 }
 
 .image {
-  height: 180px;
-  width: 180px;
+  height: 10vw;
+  width: 10vw;
   object-fit: cover;
 }
 
@@ -118,17 +116,17 @@ body {
 
 .title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 1.8vw; /* Responsive font size */
 }
 
 .type {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 1.5vw; /* Responsive font size */
 }
 
 .price {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 1.8vw; /* Responsive font size */
 }
 
 .wishlist {
@@ -138,9 +136,10 @@ body {
 }
 
 .wishlisticon {
-  height: 80px;
-  width: 80px;
+  height: 4vw;
+  width: 4vw;
 }
+
 .catalogue {
   width: 100%;
   height: 910px;
@@ -165,67 +164,69 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
   gap: 19px;
-  font-size: 24px;
+  font-size: 1.5vw; /* Responsive font size */
 }
-.potd-heading{
-  width:100%;
+
+.potd-heading {
+  width: 100%;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 1.5vw; /* Responsive font size */
   text-align: left;
 }
+
 /* Product of the Day Details */
-.potd-info{
+.potd-info {
   margin-left: 15px;
   gap: 15px;
   display: flex;
   flex-direction: column;
 }
-.typeAndprice{
+
+.typeAndprice {
   gap: 15px;
   display: flex;
   flex-direction: column;
 }
-.tpwishlist{
+
+.tpwishlist {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .potd-image {
-  width: 400px;
-  height: 400px;
+  width: 21vw;
+  height: 21vw;
   object-fit: cover;
 }
 
 .potd-title {
-  
   font-weight: 800;
-  font-size: 24px;
+  font-size: 1.5vw; /* Responsive font size */
   text-align: left;
 }
 
 .potd-type {
- 
-  font-size: 20px;
+  font-size: 1.2vw; /* Responsive font size */
   font-weight: 300;
   text-align: left;
 }
 
 .potd-price {
-
-  font-size: 32px;
+  font-size: 1.8vw; /* Responsive font size */
   color: #000;
   font-weight: 500;
   text-align: left;
 }
 
-.no-results{
+.no-results {
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24pt;
+  font-size: 1.5vw; /* Responsive font size */
   color: rgb(237, 14, 14);
   margin: 0;
 }
@@ -240,7 +241,7 @@ body {
   border: 1px solid #333; 
   padding: 10px 20px; /* Add some padding for better appearance */
   border-radius: 20px; /* Optional: Add rounded corners */
-  font-size: 16px; /* Optional: Adjust font size */
+  font-size: 1.2vw; /* Responsive font size */
 }
 
 .sort-select option {
@@ -248,11 +249,10 @@ body {
   color: white; /* Set the text color of options */
 }
 
-
-.searchandsort{
+.logosearchandsort {
+  width: 90%;
   display: flex;
   flex-direction: row;
-  align-items:center ;
-  margin-left: 200px;
-  gap:100px;
+  align-items: center;
+  gap: 5%;
 }
