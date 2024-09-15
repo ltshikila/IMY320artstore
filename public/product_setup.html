@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Product</title>
+    <link rel="stylesheet" href="css/product_page.css">
+    <link rel="stylesheet" href="css/product_setup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+</head>
+<body>
+    <div class="catalogue">
+        <div class="navigation">
+            <div class="back_btn">
+                <a href="../" class="back-button">
+                    <img src="media/icons/back.svg" alt="Back" />
+                </a>
+            </div>
+            <a class="logo">MUSE</a>
+        </div>
+        <div class="form_container">
+            <div class="product_setup_layout">
+                <div class="product_setup_details_container">
+                    <div class="product_setup_details">
+                        <!-- number 1 in circle -->
+                        <div class="circle-number">1</div>
+                        
+                        <!-- Title: Product Details -->
+                        <h3>Product Details</h3>
+
+                        <!-- product ID with label: "ID (Max 50 characters)" -->
+                        <div class="form-group">
+                            <label for="product-id">ID (Max 50 characters)</label>
+                            <input type="text" id="product-id" placeholder="e.g. C120" name="product-id" maxlength="50">
+                        </div>
+                        
+                        <!-- Title of the product with label: "Title (Max 150 characters)" -->
+                        <div class="form-group">
+                            <label for="product-title">Title (Max 150 characters)</label>
+                            <input type="text" id="product-title" placeholder="e.g. 12 Chapel set" name="product-title" maxlength="150">
+                        </div>
+                        
+                        <!-- Description of the product text area with label: "Description (Max 5000 characters)" -->
+                        <div class="form-group">
+                            <label for="product-description">Description (Max 5000 characters)</label>
+                            <textarea id="product-description" placeholder="e.g. 12 Chapel set" name="product-description" maxlength="5000"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_setup_details_container">
+                    <div class="product_setup_details">
+                        <!-- number 2 in a circle -->
+                        <div class="circle-number">2</div>
+                        
+                        <!-- Title: Links -->
+                        <h3>Links</h3>
+
+                        <!-- text input with label: Product Page’s Link -->
+                        <div class="form-group">
+                            <label for="product-page-link">Product Page’s Link</label>
+                            <input type="text" placeholder="e.g. https://myartshop.co.za/product-..." id="product-page-link" name="product-page-link">
+                        </div>
+                        
+                        <!-- text input with label: Product Image’s Link -->
+                        <div class="form-group">
+                            <label for="product-image-link">Product Image’s Link</label>
+                            <input type="text" placeholder="e.g. https://myartshop.co.za/wp-cont..." id="product-image-link" name="product-image-link">
+                        </div>
+                    </div>
+
+                    <div class="submit_btn_container">
+                        <button class="submit_btn">Submit</button>
+                    </div>
+                </div>
+
+                <div class="product_setup_details_container">
+                    <div class="product_setup_details">
+                        <!-- number 3 in a circle -->
+                        <div class="circle-number">3</div>
+                        
+                        <!-- Title: Price and Availability -->
+                        <h3>Price and Availability</h3>
+
+                        <!-- select input with label: Availability -->
+                        <div class="form-group">
+                            <label for="availability">Availability</label>
+                            <select id="availability" name="availability">
+                                <option value="in_stock">In Stock</option>
+                                <option value="out_of_stock">Out of Stock</option>
+                            </select>
+                        </div>
+                        
+                        <!-- number input with label: Availability Date -->
+                        <div class="form-group">
+                            <label for="availability-date">Availability Date</label>
+                            <input type="text" placeholder="e.g. 2022-09-27 18:00:00.000." id="availability-date" name="availability-date">
+                        </div>
+                        
+                        <!-- number input with label: Price -->
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="number" placeholder="e.g. 299 ZAR" id="price" name="price" step="0.01">
+                        </div>
+                        
+                        <!-- text input with label: Brand (Max 70 characters) -->
+                        <div class="form-group">
+                            <label for="brand">Brand (Max 70 characters)</label>
+                            <input type="text" placeholder="e.g. Prime Art" id="brand" name="brand" maxlength="70">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/product_script.js" type="module"></script>
+</body>
+</html>
