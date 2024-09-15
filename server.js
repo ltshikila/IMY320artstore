@@ -13,6 +13,11 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve form.html when accessing the root path
+app.get("/form", (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'form.html'));
+});
+
 //Database connection
 mongoose.connect('mongodb+srv://ltshikila17:d2HO4CGFT8kZDy40@imy320artstore.osue4xj.mongodb.net/', {
     useNewUrlParser: true,
@@ -23,7 +28,6 @@ mongoose.connect('mongodb+srv://ltshikila17:d2HO4CGFT8kZDy40@imy320artstore.osue
     console.log("db connection error", error);
   });
 
-  
 //Server connection
 app.listen(port, () => {
     console.log(`Server is listening on http://localhost:${port}`);

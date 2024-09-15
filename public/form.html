@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Product</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+</head>
+
+<body>
+    <div class="form">
+        <div class="logo">MUSE</div>
+        <div class="heading">Product Form</div>
+        <div class="subforms">
+            <div class="subform">
+                <div class="numicon">1</div>
+                <h3 class="subheading">Product Details</h3>
+
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        ID (Max 50 characters)
+                    </label>
+                    <input class="input" placeholder="e.g. C120" type="text" />
+                </div>
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        Title (Max 150 characters)
+                    </label>
+                    <input class="input" placeholder="e.g. 12 Chapel set" type="text" />
+                </div>
+                <div class="inputcontainer">
+                    <label class="Description_label">
+                        Description (Max 5000 characters)
+                    </label>
+                    <input class="input"
+                        placeholder="e.g. A quality chapel set with all the colors you need to create..." type="text" />
+                </div>
+            </div>
+
+            <div class="subfrom-and-btn">
+                <div class="subform">
+                    <div class="numicon">2</div>
+                    <h3 class="subheading">Links</h3>
+                    <div class="inputcontainer">
+                        <label class="input_label">
+                            Product Page’s Link
+                        </label>
+                        <input class="input" placeholder="e.g. https://myartshop.co.za/product-..."
+                            type="text" />
+                    </div>
+                    <div class="inputcontainer">
+                        <label class="input_label">
+                            Product Image’s Link
+                        </label>
+                        <input class="input" placeholder="e.g. https://myartshop.co.za/wp-cont..."
+                            type="text" />
+                    </div>
+                </div>
+                <button class="submitbtn">
+                    Submit
+                </button>
+            </div>
+
+            <div class="subform">
+                <div class="numicon">3</div>
+                <h3 class="subheading">Price and Availability</h3>
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        Availability
+                    </label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="in_stock">In Stock</option>
+                        <option value="out_of_stock">Out of Stock</option>
+                        <option value="preorder">Preorder</option>
+                        <option value="backorder">Backorder</option>
+                    </select>
+                </div>
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        Availability Date
+                    </label>
+                    <input class="input" placeholder="e.g. 2022-09-27 18:00:00.000." type="text" />
+                </div>
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        Price
+                    </label>
+                    <input class="input" placeholder="e.g. 299 ZAR" type="text" />
+                </div>
+                <div class="inputcontainer">
+                    <label class="input_label">
+                        Brand (Max 70 characters)
+                    </label>
+                    <input class="input" placeholder="e.g. Prime Art" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
