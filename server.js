@@ -18,6 +18,9 @@ app.get("/form", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'form.html'));
 });
 
+app.get("/reciept", (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'reciept.html'));
+});
 //Database connection
 mongoose.connect('mongodb+srv://ltshikila17:d2HO4CGFT8kZDy40@imy320artstore.osue4xj.mongodb.net/', {
     useNewUrlParser: true,
