@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       passwordInput.setAttribute("type", type);
 
       // Toggle the eye icon
-      togglePassword.src = type === "password" ? "./public/eye.png" : "./public/eye_hide.png";
+      togglePassword.src = type === "password" ? "./media/images/eye.png" : "./media/images/eye_hide.png";
     });
   });
   

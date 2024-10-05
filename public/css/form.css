@@ -9,19 +9,38 @@ body {
 .form {
     display: flex;
     flex-direction: column;
-
+    
     padding: 2rem;
-    background: linear-gradient(129.22deg,
-            rgba(215, 215, 215, 0.2),
-            rgba(166, 255, 124, 0.2)),
-        linear-gradient(246.99deg, #fff, #caffff);
+    background: linear-gradient(-45deg, rgb(175, 255, 138), #FF7CE2, #fff, #00ffff);
+    background-size: 400% 400%;
+    animation: formGradient 15s ease infinite;
     overflow: hidden;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
     color: #000;
     font-family: "Inter";
+    
 }
+
+@keyframes formGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .heading {
     width: 100%;
@@ -62,8 +81,13 @@ body {
     border-radius: 50px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
     width: 25vw;
-    background: #ffffff73;
+    background: #ffffff30;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
+.subform:hover {
+    transform: scale(1.025); 
+    background-color: #fff; 
 }
 
 .subform2 {
@@ -77,9 +101,12 @@ body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
     width: 25vw;
     height: 100%;
-
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
+.subform2:hover {
+    transform: scale(1.025); 
+    background-color: #fff;
+}
 
 .subfrom-and-btn {
     display: flex;
@@ -142,9 +169,13 @@ body {
     border-radius: 25px;
     box-sizing: border-box;
     font-size: 1.25rem;
-
+    transition: border 0.3s ease; 
 }
 
+.input:focus {
+    border: 1px solid  #9747FF; /* Changes border color on focus */
+    outline: none; /* Removes default focus outline */
+}
 .Description_input {
     display: flex;
     justify-content: start;
@@ -157,8 +188,13 @@ body {
     border-radius: 25px;
     box-sizing: border-box;
     font-size: 1.25rem;
+    transition: border 0.3s ease; 
 }
 
+.Description_input:focus {
+    border: 1px solid  #9747FF; /* Changes border color on focus */
+    outline: none; /* Removes default focus outline */
+}
 .submitbtn {
     font-size: 1.5rem;
     text-align: center;
@@ -189,4 +225,10 @@ body {
     border-radius: 25px;
     box-sizing: border-box;
     font-size: 1.25rem;
+    transition: border 0.3s ease; 
+}
+
+.Availability-dropdown:focus {
+    border: 1px solid  #9747FF; /* Changes border color on focus */
+    outline: none; /* Removes default focus outline */
 }
