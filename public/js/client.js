@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.querySelector(".enter-email");
     const passwordInput = document.querySelector(".enter-password");
     const errorElement = document.querySelector(".error");
+    const toggleForm = document.querySelector(".toggle-form");
+    const signUpLink = document.querySelector(".sign-up");
+    const loginContainer = document.querySelector(".logincontainer");
+    const signupContainer = document.querySelector(".signup-container");
+    const togglePassword = document.querySelector("#togglePassword");
+    const toggleSignupPassword = document.querySelector("#toggleSignupPassword");
   
     loginButton.addEventListener("click", async () => {
       const email = emailInput.value;
@@ -49,5 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // Toggle the eye icon
       togglePassword.src = type === "password" ? "./media/images/eye.png" : "./media/images/eye_hide.png";
     });
+
+    toggleSignupPassword.addEventListener("click", () => {
+      const type = signupPasswordInput.getAttribute("type") === "password" ? "text" : "password";
+      signupPasswordInput.setAttribute("type", type);
+
+      // Toggle the eye icon
+      toggleSignupPassword.src = type === "password" ? "./media/images/eye.png" : "./media/images/eye_hide.png";
+    });
+
+    signUpLink.addEventListener("click", () => {
+      loginContainer.style.display = "none";
+      signupContainer.style.display = "flex";
+    });
+
   });
-  

@@ -145,8 +145,12 @@
 }
 .logincontainer {
   width: 649px;
+  display: flex;
+  flex: 1;
   flex-direction: row;
-  padding: 220px 20px;
+  /* padding: 220px 20px; */
+  height: 100%;
+  justify-content: center;
   min-width: 649px;
 }
 .sign-up {
@@ -167,10 +171,10 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(../media/images/frame-1@3x.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position:center;
+  /* background-image: url(../media/images/frame-1@3x.png); */
+  /* background-size:cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position:center; */
   min-height: 100%;
   max-width: 1080px;
   font-size: 36px;
@@ -215,8 +219,55 @@
 }
 
 
-.error{
-  font-size: 14pt;
-  color: rgb(237, 14, 14);
-  margin: 0;
+
+
+/* Existing styles... */
+
+.sign-up-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 1080px;
+  font-size: 36px;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the container */
+  object-position: center;
+  /* Centers the image */
+  transition: filter 0.3s ease;
+}
+
+.sign-up-wrapper:hover .background-image {
+  filter: brightness(1.2);
+  transform-box:content-box;
+}
+
+.sign-up {
+  text-decoration: none;
+  position: absolute;
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+  margin: 25px 50px;
+  cursor:default;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.sign-up-wrapper:hover .sign-up {
+  transform: scale(1.3);
 }
