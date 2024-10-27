@@ -1,63 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muse Product</title>
-    <link rel="stylesheet" href="../css/product_page.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
-</head>
-<body>
-    <div class="catalogue">
-        <div class="navigation">
-            <div class="back_btn">
-                <a href="../" class="back-button">
-                    <img src="media/icons/back.svg" alt="Back" />
-                </a>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muse</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/product_page.css">
+        <link rel="stylesheet" href="css/search_bar.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="the-blur"></div>
+        <nav id="nav">
+            <div class="logo">
+                <img src="/media/icons/logo_word.svg" alt="bla" />
             </div>
-           <div class="searchbar">
-                <div class="search_input">
-                    <input
-                        type="text"
-                        class="search-input"
-                        placeholder="start supply searching..."
-                        aria-label="Search"
-                    />
-                    <img class="search-icon" alt="Search Icon" src="../media/images/search.png" />
-                </div>
-                <div class="search-dropdown"></div> <!-- Added dropdown container -->
+            <div class="search-bar">
             </div>
-            <a class="logo">MUSE</a>
-        </div>
-        <div class="products_layout">
+            <div class="user">
+                <img src="/media/icons/default_user_i.svg" alt="User" />
+            </div>
+        </nav>
 
-            <div class="product_card">
-                <section class="header">
-                    <div class="product_page_heading">
-                        <div class="product_name"></div>
-                    </div>
-                </section>
-                
-                <div class="product_info">
-                    <div class="product_image_price">
-                        <img src="" alt="" />
-                    </div>
-                    <div class="product_description">
-                        <ul class="product_details"></ul>
-                    </div>
-                </div>
+        <div class="page-heading text-big">Product Name</div>
 
-                <div class="product_price_and_cart">
-                    <div class="product_price"></div>
-                    <div class="add_to_cart">
-                        <button class="add_to_cart_button">Add to Cart</button>
-                        <div class="number_of_items">0</div>
-                    </div>
-                </div>
+        <div class="main-container">
+
+            <div class="product-info">
+                <!-- product gets loaded here via js -->
             </div>
+
+            <div class="cart">
+            </div>
+
         </div>
-    </div>
-    <script src="js/product_script.js" type="module"></script>
-</body>
+
+        <div class="similar-products">
+            <div class="sp-heading">Similar Products</div>
+            <div class="sp-content"> </div>
+        </div>
+
+        
+
+
+        <script src="js/search_bar.js" type="module"></script>
+        <script src="js/product_page.js" type="module"></script>
+    </body>
 </html>

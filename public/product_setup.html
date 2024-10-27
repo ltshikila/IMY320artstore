@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse Product</title>
-    <link rel="stylesheet" href="css/product_page.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/product_setup.css">
+    <link rel="stylesheet" href="css/search_bar.css"> <!-- Include the search bar CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-    <div class="catalogue">
-        <div class="navigation">
-            <div class="back_btn">
-                <a href="../" class="back-button">
-                    <img src="media/icons/back.svg" alt="Back" />
-                </a>
-            </div>
-            <a class="logo">MUSE</a>
+    <div class="the-blur"></div>
+    <nav id="nav">
+        <div class="logo">
+            <img src="/media/icons/logo_word.svg" alt="bla" />
         </div>
+        <div class="search-bar">
+        </div>
+        <div class="user">
+            <img src="/media/icons/default_user_i.svg" alt="User" />
+        </div>
+    </nav>
+    <div class="catalogue">
+        <div class="search-bar-container"></div> <!-- Container for the search bar -->
         <div class="form_container">
             <div class="product_setup_layout">
                 <div class="product_setup_details_container">
@@ -114,6 +121,13 @@
             </div>
         </div>
     </div>
+    <script src="js/search_bar.js" type="module"></script> <!-- Include the search bar JS -->
     <script src="js/product_script.js" type="module"></script>
+    <script type="module">
+        import { insertSearchBar } from './js/search_bar.js';
+        $(document).ready(function() {
+            insertSearchBar('.search-bar');
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,6 @@ import { artPrompts } from '/js/art_prompts.js';
 import { insertSearchBar } from '/js/search_bar.js';
 
 $(document).ready(function() {
-    // Insert the search bar into the specified container
     insertSearchBar('.search-bar');
 
     const sortSelect = $('#sort-select');
@@ -12,25 +11,6 @@ $(document).ready(function() {
     const inspoHeading = $('.inspo-heading');
     const inspoContent = $('.inspo-content');
     let lastPromptIndex = -1;
-
-    $(window).on('scroll', function() {
-        const scrollTop = $(this).scrollTop();
-        const blurValue = Math.min(scrollTop / 20, 10); // Fully blurred at 200px
-        const shadowValue = Math.min(scrollTop / 20, 10); // Strongest shadow at 200px
-        const shadowOpacity = Math.min(scrollTop / 200, 0.2); // Opacity increases with scroll, max 0.2
-
-        $('.the-blur').css({
-            'backdrop-filter': `blur(${blurValue}px)`,
-            'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
-            'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
-        });
-
-        $('#search-results').css({
-            'backdrop-filter': `blur(${blurValue}px)`,
-            'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
-            'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
-        });
-    });
 
     function fuzzySearch(term) {
         const lowerCaseTerm = term.toLowerCase();
@@ -133,7 +113,7 @@ $(document).ready(function() {
 
     // Attach the handleSearch function to the search button click event
     $('#search-icon').on('click', handleSearch);
-     $('#search-input').on('keypress', function(e) {
+    $('#search-input').on('keypress', function(e) {
         if (e.which === 13) { // 13 is the Enter key
             handleSearch();
         }

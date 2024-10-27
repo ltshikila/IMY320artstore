@@ -1,8 +1,9 @@
 export const products = [
     {
         name: "14 Short Flat Daler Rowney Georgian Brush",
-        type: "Paint brush",
+        type: "brush",
         price: 345.00,
+        rating: 4.5,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/G36Size14-rotated-1.jpg.webp",
         wishlist: false,
         description:[
@@ -18,8 +19,9 @@ export const products = [
     },
     {
         name: "12″ Pro Art Manikin Female",
-        type: "Mannequin",
+        type: "mannequin",
         price: 130.00,
+        rating: 3.5,
         image:"https://myartshop.co.za/wp-content/uploads/2023/09/12-pro-art-manikin-female-01.webp",
         wishlist: false,
         description:[
@@ -31,8 +33,9 @@ export const products = [
     },
     {
         name: "12’s Oil Prime Art Paint Set",
-        type: "Paint set",
+        type: "paint",
         price: 155.00,
+        rating: 4.5,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Oil12b.jpg.webp",
         wishlist: false,
         description:[
@@ -43,8 +46,9 @@ export const products = [
     },
     {
         name: "Dala Glow in the Dark Paint 100ml",
-        type: "Paint sets",
+        type: "paint",
         price: 135.00,
+        rating: 3.5,
         image:"https://myartshop.co.za/wp-content/uploads/2024/01/dala-glow-in-the-dark-apint-100ml.webp",
         wishlist: false,
         description:[
@@ -55,8 +59,9 @@ export const products = [
     },
     {
         name: "Chestnut Brown Pinty Plus Chalk Spray Paint",
-        type: "Spray paint",
+        type: "paint",
         price: 175.00,
+        rating: 5,
         image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Chestnut.jpg.webp",
         wishlist: false,
         description:[
@@ -70,8 +75,9 @@ export const products = [
     },
     {
         name: "Prime Art Compact Wooden Table Easel – H Frame",
-        type: "Easel",
+        type: "easel",
         price: 599.00,
+        rating: 5,
         image:"https://myartshop.co.za/wp-content/uploads/2023/01/Prime-Art-Compact-Wooden-Table-Easel-H-Frame-01.webp",
         wishlist: false,
         description:[
@@ -87,8 +93,9 @@ export const products = [
     },
     {
         name: "4″ x 4″ Artboard Professional Box Canvas",
-        type: "Canvas",
+        type: "canvas",
         price: 40.00,
+        rating: 4.5,
         image:"https://myartshop.co.za/wp-content/uploads/2024/08/4-x-4-artboard-professional-box-canvas.webp",
         wishlist: false,
         description:[
@@ -99,5 +106,222 @@ export const products = [
             "Medium Grain Canvas.",
             "Artboard Professional Box Canvases are available in a variety of different sizes.",
         ]
-    }
+    },
+    {
+        name: "2 Filbert Daler Rowney Georgian Brush",
+        type: "brush",
+        price: 85.00,
+        rating: 4.5,
+        image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/G12Size2-rotated-1.jpg.webp",
+        wishlist: false,
+        description:[
+            "Oil painting calls for resilient, durable and sturdy hog bristle brushes that have good color retention and are easy to use.",
+            "Daler-Rowney Georgian Brushes feature extra-fine quality Chungking bristles, with a high percentage of natural flags for maximum colour holding and smooth flexible strokes.",
+            "They are handmade using traditional interlocked construction for durability and control.",
+            "The Filbert Daler Rowney Georgian Brushes have been engineered to offer the best selection of oil paint brushes in the market for art students and professionals.",
+            "Curving gently towards a point for soft-edged, controlled strokes. Useful for strong, tapering strokes.",
+            "Traditional interlocked construction for durability and control.",
+            "Natural hair.",
+            "Ideal for oil.",
+            "Long Handles.",
+        ]
+    },
+    {   itemID: "item9",
+        name: "Coeruluem Daler Rowney Georgian Oil",
+        type: "paint",
+        price: 100.00,
+        rating: 4.4,
+        image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Coeruleum.jpg.webp",
+        wishlist: false,
+        description:[
+            "Daler Rowney Georgian Oil Colours are made from carefully selected permanent, organic pigments ensuring the highest standards of durability, reliability, lightfastness and working properties.",
+            "These rich, low-odour oil paint colours can be used directly from the tube with brush or knife, or thinned to create the finest of glazes.",
+            "Traditionally crafted and triple-milled. High pigment load including cadmium and cobalt.",
+            "Exceptionally permanent (3*) and brilliant colours.",
+            "Smooth and buttery consistency.",
+            "Colours are intermixable and consistent from wet to dry.",
+            "Daler Rowney Georgian Oils have a drying time of 2-5 days.",
+            "Made in England.",
+            "Daler Rowney Georgian Oils are available in 38ml tubes.",
+        ]
+    },
+    {    
+        itemID: "item10",
+        name: "Pro-Art Gouache Paint",
+        type: "paint",
+        price: 285.00,
+        rating: 5.5,
+        image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/Gouache24a.jpg.webp",
+        wishlist: false,
+        description:[
+            "Pro-Art Gouache Paint utilizes a versatile colour range used frequently by artists and hobbyists",
+            "Excellent light-fastness, fabulous tinting strength, strong covering power and gorgeous colours",
+            "Create any colour you desire with the fully inter-mixable paints",
+            "Use directly from tube to dilute with water",
+            "Smooth and buttery consistency.",
+            "Paints smoothly and is easy to mix",
+            "24 x 12ml starter tubes with gorgeous colours",
+        ]
+    },
+    {   
+        itemID: "item11",
+        name: "Daler Rowney Turpentine",
+        type: "paint",
+        price: 185.00,
+        rating: 5.5,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/01/Turpentine.jpg",
+        wishlist: false,
+        description:[
+            "Turpentine which dilutes oil colour to create thin, quick-drying washes in the early stages of painting and can also be used to clean brushes",
+            "Mix with oil paints until desired consistency",
+            "Also used directly to clean brushes and palettes",
+            "75ml",
+        ]
+    },
+    {   
+        itemID: "item12",
+        name: "Brush Washer Aluminium",
+        type: "brush",
+        price: 115.00,
+        rating: 3.5,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/01/brush-washer-aluminium-01.webp",
+        wishlist: false,
+        description:[
+            "Made from aluminum, this brush washer is the most practical device for keeping brushes suspended in water or thinner.",
+            "Features a removable sediment tray and a spring coil brush holder, which holds brushes of any size, protecting the head from damage.",
+            "Brush Washer Aluminium measures 18cm.",
+        ]
+    },
+    {   
+        itemID: "item13",
+        name: "Derwent Techniques Brush Set",
+        type: "brush",
+        price: 375.00,
+        rating: 5.5,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/07/Derwent-Techniques-Brush-Set-01.webp",
+        wishlist: false,
+        description:[
+            "The Derwent Techniques Brush Set is a specially selected assortment of brushes for different painting techniques; each brush in this set has been developed to produce different marks, allowing the artist greater creative possibilities.",
+            "Create a variety of interesting brush marks on paper, from washes to fine detail.",
+            "Set includes 6 brushes: foam, sword liner, fan, flat, comb and rigger.",
+            "Synthetic hair tips",
+            "Derwent Techniques Brushes are for use with watercolour paints, water-soluble pencils and blocks such as the Derwent Graphik Line Painter pens.",
+            "Professional quality paintbrush set for creating a wide variety of marks.",
+            "6 assorted brush create a wide variety of different marks – laying down a wash over a large area, creating fine lines, creating marks such as hair and grass.",
+            "",
+            "",
+        ]
+    },
+    {   
+        itemID: "item14",
+        name: "Faber Castell Clic & Go Water Cup Turquoise",
+        type: "faber_castell",
+        price: 375.00,
+        rating: 3.4,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/07/faber-castell-clic-and-go-water-cup-turquoise-03-1.webp",
+        wishlist: false,
+        description:[
+            "The Faber Castell Clic & Go Water Cup has a collapsible and expandable feature which makes it the perfect cup for travel and storage.",
+            "It can also be used as a brush tray, keeping the workplace clean and tidy.",
+            "Built in brush holder – It features scalloped edges so your paintbrush will not roll off of the cup between uses. Paintbrushes are not included.",
+            "Wavy edge serves as a brush tray – so the workplace remains clean.",
+            "This heavy duty water cup holds approximately 350ml or 12 ounces and is PVC and latex-free.",
+            "See your artwork come to life with the absolute best quality art materials. Faber-Castell has proudly manufactured premium quality art materials since 1761.",
+            "Very robust, non-slip material.",
+            "Easy to clean.",
+            "The Faber Castell Clic & Go Water Cup is available in other colours.",
+        ]
+    },
+    {   
+        itemID: "item15",
+        name: "Mont Marte Zippered Brush Wallet",
+        type: "brush",
+        price: 155.00,
+        rating: 3.4,
+        image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/p_8_8_9_1_8891-Mont-Marte-Zippered-Brush-Wallet.jpg.webp",
+        wishlist: false,
+        description:[
+            "Mont Marte Zippered Brush Wallet",
+            "With the Mont Marte Zippered Brush Wallet you can easily keep your paint brushes safe and organized with this cleverly designed zippered wallet",
+            "This versatile brush storage case can also be folded to create a stand for your brushes when working in your studio",
+            "This Mont Marte brush wallet is great for artists who like to store their brushes away, or for artists on the move",
+            "The wallet hold up to 22 brushes or palette knives and can fit brushes up to 33cm in length, folding flat for easy storage and transportation",
+            "Perfect for storing, protecting and transporting brushes safely – protecting bristles from damage",
+            "Holds a wide range of brush sizes",
+            "Holds brushes up to 33cm in length",
+            "Compact and easy to carry.",
+        ]
+    },
+    {   
+        itemID: "item16",
+        name: "Zig Posterman Paint Marker Medium Set of 8",
+        type: "marker",
+        price: 195.00,
+        rating: 5.4,
+        image:"https://myartshop.co.za/wp-content/uploads/2024/10/zig-posterman-paint-marker-medium-set-of-8-01.webp",
+        wishlist: false,
+        description:[
+            "The ZIG Posterman Paint Markers are versatile and highly suitable for decorating chalkboards, whiteboards, windows, mirrors and a variety of porous and non-porous surfaces, including plastic, metal and wood.",
+            "They are opaque, lightfast and produce a chalk look without a mess.",
+            "These markers are resistant to water but will clean off glass, chalkboards and other non-porous materials with ammonia-based household cleaners.",
+            "Water based pigment ink which is highly opaque, lightfast, odourless and xylene free.",
+            "Water resistant after drying and suitable for various different surfaces.",
+            "Medium Set (2mm nibs).",
+            "Perfect for use on baked polymer clay",
+            "Holds brushes up to 33cm in length",
+            "The Zig Posterman Paint Marker Medium Set of 8 contains the following colours: White, Black, Red, Pink, Blue, Light Blue, Green and Yellow..",
+        ]
+    },
+    {   
+        itemID: "item17",
+        name: "Set of 100 Faber Castell BLACK Edition Colour Pencils in Tin",
+        type: "pencil",
+        price: 1695.00,
+        rating: 5.5,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/10/set-of-100-faber-castell-black-edition-colour-pencils-in-tin-01-600x600.webp",
+        wishlist: false,
+        description:[
+            "The Faber Castell BLACK Edition Colour Pencils have a wonderfully soft and vibrant colour laydown thanks to their super soft lead.",
+            "The high pigmentation of the lead makes them ideal for painting and drawing techniques on light, coloured and dark paper.",
+            "The ergonomic triangular shape of the pencils automatically ensures the correct grip position and optimum comfort when drawing and painting.",
+            "Black wood and super soft lead: Pure colour!",
+            "High quality tin with 12 Black Edition colour pencils.",
+            "Super soft lead for great effects even on coloured and dark paper.",
+            "Colour pencils with ergonomic triangular shape.",
+            "Brilliant colours.",
+            "Extra smooth colour laydown.",
+        ]
+    },
+    {   
+        itemID: "item18",
+        name: "Derwent Pencil Extenders",
+        type: "pencil",
+        price: 280.00,
+        rating: 3.3,
+        image:"https://myartshop.co.za/wp-content/uploads/2023/01/derwent-pencil-extender-02.webp",
+        wishlist: false,
+        description:[
+            "Derwent pencils extenders are ideal for extending the life of pencils and allowing artists to waste less material.",
+            "The silver extender fits larger pencils up to 8mm in diameter, and the black extender fits standard size pencils up to 7mm in diameter.",
+            "They feature a metal screw-style collar that holds pencils more firmly than a standard clutch style extender.",
+            "The hollow design allows for use as a holder or protector for longer pencils.",
+            "Derwent Pencil Extender Pack contains 2 pencil extenders.",
+        ]
+    },
+    {   
+        itemID: "item19",
+        name: "A4 Fabriano Black Black 300g",
+        type: "pencil",
+        price: 215.00,
+        rating: 5.9,
+        image:"https://myartshop.co.za/wp-content/smush-webp/2023/01/p_1_1_0_2_0_11020-A4-Fabriano-Black-Black-300g.jpg.webp",
+        wishlist: false,
+        description:[
+            "Fabriano Black Black is a range of uncoated cardboards made of ECF cellulose pulp",
+            "This paper is characterized by a very deep black colour due to the high quality and lightfast pigments used for its production",
+            "Flexible and resistant it is ideal for pastel, colour pencils, markers, acrylics, passe-partout and portfolio presentations.",
+            "20 Sheets",
+            "300gsm",
+        ]
+    },
 ];

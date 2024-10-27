@@ -1,5 +1,24 @@
 import { products } from '/js/products.js';
 
+    $(window).on('scroll', function() {
+        const scrollTop = $(this).scrollTop();
+        const blurValue = Math.min(scrollTop / 20, 10);
+        const shadowValue = Math.min(scrollTop / 20, 10);
+        const shadowOpacity = Math.min(scrollTop / 200, 0.2);
+
+        $('.the-blur').css({
+            'backdrop-filter': `blur(${blurValue}px)`,
+            'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
+            'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
+        });
+
+        $('#search-results').css({
+            'backdrop-filter': `blur(${blurValue}px)`,
+            'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
+            'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
+        });
+    });
+
 export function insertSearchBar(container) {
     const searchBarHTML = `
         <div class="search-bar">
