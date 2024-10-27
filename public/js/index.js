@@ -9,20 +9,25 @@ $(document).ready(function() {
     const potdSection = $('.product-otd');
     const inspoHeading = $('.inspo-heading');
     const inspoContent = $('.inspo-content');
+    const searchResults = $('#search-results');
+    const searchBar = $('.search-bar');
     let lastPromptIndex = -1;
-    
-    $(window).on('scroll', function() {
-        const scrollTop = $(this).scrollTop();
-        const blurValue = Math.min(scrollTop / 20, 10); // Fully blurred at 200px
-        const shadowValue = Math.min(scrollTop / 20, 10); // Strongest shadow at 200px
-        const shadowOpacity = Math.min(scrollTop / 200, 0.2); // Opacity increases with scroll, max 0.2
 
-        $('nav').css({
-            'backdrop-filter': `blur(${blurValue}px)`,
-            'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
-            'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
-        });
-    });
+
+    // $(window).on('scroll', function() {
+    //     const scrollTop = $(this).scrollTop();
+    //     const blurValue = Math.min(scrollTop / 20, 10); // Fully blurred at 200px
+    //     const shadowValue = Math.min(scrollTop / 20, 10); // Strongest shadow at 200px
+    //     const shadowOpacity = Math.min(scrollTop / 200, 0.2); // Opacity increases with scroll, max 0.2
+
+
+    //     $('nav').css({
+    //         'backdrop-filter': `blur(${blurValue}px)`,
+    //         'box-shadow': `0 4px ${shadowValue}px rgba(0, 0, 0, ${shadowOpacity})`,
+    //         'background-color': `rgba(210, 210, 210, ${shadowOpacity})`
+    //     });
+
+    // });
 
     function fuzzySearch(term) {
         const lowerCaseTerm = term.toLowerCase();
@@ -70,12 +75,14 @@ $(document).ready(function() {
             const productCard = $(`
                 <div class="product-card">
                     <img class="product-img" src="${product.image}" alt="${product.name}" />
-                    <div class="name">${product.name}</div>
-                    <div class="description">${trimmedDescription}</div>
-                    <div class="price-wishlist">
-                        <div class="price important-text">R${product.price.toFixed(2)}</div>
-                        <div class="wishlist">
-                            <img class="wishlist-icon" src="${product.wishlist ? '/media/images/wishliston.png' : '/media/images/wishlistoff.png'}" alt="Add to wishlist" />
+                    <div class="product-info-container">
+                        <div class="name">${product.name}</div>
+                        <div class="description">${trimmedDescription}</div>
+                        <div class="price-wishlist">
+                            <div class="price important-text">R${product.price.toFixed(2)}</div>
+                            <div class="wishlist">
+                                <img class="wishlist-icon" src="${product.wishlist ? '/media/images/wishliston.png' : '/media/images/wishlistoff.png'}" alt="Add to wishlist" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,8 +128,48 @@ $(document).ready(function() {
         renderProducts(sortedProducts);
     }
 
+    function displaySearchResults(filteredProducts) {
+        searchResults.empty(); // Clear existing results
+
+        if (filteredProducts.length === 0) {
+            searchResults.hide();
+            searchBar.removeClass('expanded');
+            return;
+        }
+
+        filteredProducts.forEach((product) => {
+            const resultItem = $(`
+                <div class="search-result-item">
+                    ${product.name}
+                </div>
+            `);
+
+            // Add event listener to go to product page
+            resultItem.on('click', function() {
+                localStorage.setItem('product', JSON.stringify(product));
+                window.location.href = 'product.html';
+            });
+
+            searchResults.append(resultItem);
+        });
+
+        searchResults.show();
+        searchBar.addClass('expanded');
+    }
+
     // Set up the search functionality
     searchButton.on('click', handleSearch);
+    searchInput.on('input', function() {
+        const searchTerm = $(this).val().trim();
+        if (searchTerm === '') {
+            searchResults.hide();
+            searchBar.removeClass('expanded');
+        } else {
+            const filteredProducts = fuzzySearch(searchTerm);
+            displaySearchResults(filteredProducts);
+        }
+    });
+
     searchInput.on('keypress', function(event) {
         if (event.key === 'Enter') {
             handleSearch();
@@ -130,6 +177,22 @@ $(document).ready(function() {
     });
 
     sortSelect.on('change', handleSearch);
+
+    // Hide search results when clicking outside the search bar
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.search-bar').length) {
+            searchResults.hide();
+            searchBar.removeClass('expanded');
+        }
+    });
+
+    // Hide search results when pressing the Escape key
+    $(document).on('keydown', function(event) {
+        if (event.key === 'Escape') {
+            searchResults.hide();
+            searchBar.removeClass('expanded');
+        }
+    });
 
     function renderProductOfTheDay() {
         const potdProduct = products[products.length - 1]; // Assuming the last product in the array is the "Product of the Day"
@@ -181,6 +244,7 @@ $(document).ready(function() {
     });
 
     setRandomPrompt(); // Set initial random prompt
+
     renderProducts(); // Initial render of all products
     renderProductOfTheDay(); // Render the product of the day
 });
