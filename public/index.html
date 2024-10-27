@@ -1,69 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muse Product Catalogue</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
-</head>
-<body>
-  <div class="catalogue">
-    
-    <section class="header">
-      
-      <div class="logosearchandsort">
-        <div class="navigation">
-          <a class="logo">MUSE</a>
-        </div>
-        <div class="searchbar">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="start supply searching..."
-            aria-label="Search"
-          />
-          <img class="search-icon" alt="Search Icon" src="./media/images/search.png" />
-        </div>
-        <div class="sort-dropdown">
-          <select id="sort-select" class="sort-select">
-            <option value="name-asc">Name (A-Z)</option>
-            <option value="name-desc">Name (Z-A)</option>
-            <option value="price-asc">Price (ascending)</option>
-            <option value="price-desc">Price (descending)</option>
-          </select>
-        </div>
-      </div>
-      
-      <div class="product-catalogue">Product Catalogue</div>
-      
-    </section>
-    <div class="productslayout">
-      <section class="productlist" id="productlist"></section>
-      <!-- Product of the Day Section -->
-      <section class="potd">
-        <label class="potd-heading">Product of the day</label>
-        <img class="potd-image" loading="lazy" alt="Product of the Day" />
-        <div class="potd-info">
-          <div class="potd-title"></div>
-          <div class="tpwishlist">
-            <div class="typeAndprice">
-              <div class="potd-type"></div>
-              <div class="potd-price"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muse Product Catalogue</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="/media/icons/logo_word.svg" alt="bla" />
             </div>
-            <button class="wishlist">
-              <img class="wishlisticon" src="./media/images/wishlistoff.png" alt="Wishlist" />
-            </button>
-          </div>
-          
-          
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for products" />
+                <img src="/media/icons/search.svg" alt="Search" id="search-icon" class="search-icon" />
+            </div>
+            <div class="user">
+                <img src="/media/icons/default_user_i.svg" alt="User" />
+            </div>
+        </nav>
+
+        <div class="page-heading text-big">See What we have to offer!</div>
+
+        <div class="main-container">
+
+            <div class="inspo">
+                <div class="inspo-heading">Imagine...</div>
+                <div class="inspo-content"> </div>
+            </div>
+
+            <div class="product-listing">
+                <!-- products get loaded here via js -->
+            </div>
+
+            <div class="product-otd">
+            </div>
+
         </div>
-      </section>
-    </div>
-    
-    
-  </div>
-  <script src="script.js" type="module"></script>
-</body>
+
+
+
+        <script src="js/index.js" type="module"></script>
+
+    </body>
+
 </html>

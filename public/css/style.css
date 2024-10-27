@@ -1,0 +1,159 @@
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #9accfc, #acd8e9, #ecc3ff, #c0afff);
+    background-size: 400% 400%;
+    animation: loginGradient 60s ease infinite;
+    color: #000;
+    height: 100vh;
+}
+
+@keyframes loginGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    height: 90px;
+    margin: 20px;
+}
+
+form{
+    width: 100%;
+    width: 500px;
+    padding: 25px 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(230deg, #9df1ed33, #ba88fc33);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+input {
+    border: 2px solid #333;
+    border-radius: 21px;
+    height: 30px;
+    padding: 10px 5px 10px 5px;
+    margin: 10px -5px 10px -5px;
+    display: block;
+    width: 100%;
+    font-family: Inter;
+    font-size: 1.2em;
+    background-color: #ffffff00;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #9747FF;
+
+}
+
+label {
+    font-family: Inter;
+    display: block;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+    padding: 12px 10px;
+    background: linear-gradient(246.99deg, #4DA9FF, #6000DE);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    width: 224px;
+    border-radius: 50px;
+    flex-direction: row;
+    font-family: Inter;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+button:hover {
+    background: linear-gradient(230deg, #9df1ed6e, #6000DE50);
+    width: 234px;
+}
+
+.input-fields {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.password-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 66%;
+    left: 93%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+.text-big {
+    font-size: 3em;
+    font-weight: 100;
+    color: #000;
+    font-family: Inter;
+}
+
+.wishlist-icon{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

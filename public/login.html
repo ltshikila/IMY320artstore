@@ -1,59 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
-    />
-  </head>
-  <body class="login">
-    <div class="logincontainer">
-      <div class="form">
-        <div class="welcome-back-wrapper">
-          <h1 class="welcome-back">Welcome Back</h1>
-        </div>
-        <div class="inputs-outer">
-          <div class="inputs-inner">
-            <div class="email">
-              <input
-                class="enter-email"
-                placeholder="Enter Email"
-                type="text"
-              />
-            </div>
-            <div class="password">
-              <input
-                class="enter-password"
-                placeholder="Enter Password"
-                type="password"
-                id="passwordInput"
-              />
-              <img
-                class="eye-icon"
-                alt="Toggle Password Visibility"
-                src="media/images/eye@2x.png"
-                id="togglePassword"
-                style="cursor: pointer;"
-              />
-            </div>
-          </div>
-          <div class="forgot-password">Forgot Password?</div>
-          <p class="error"></p>
-        </div>
-        <button class="loginbtn">
-          <div class="logintxt">Login</div>
-        </button>
-      </div>
-    </div>
-    <section class="sign-up-wrapper">
-      <img src="../media/images/frame-1@3x.png" alt="Sign Up Background" class="background-image">
-      <a class="sign-up">Sign Up</a>
-    </section>
-
-    <script src="js/client.js"></script>
-  </body>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"/>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<div id="auth-container"></div>
+		<div id="side-image">
+			<img src="../media/images/frame-1@3x.png" alt="Sign Up Background" class="background-image">
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/auth.js"></script>
+	</body>
 </html>
