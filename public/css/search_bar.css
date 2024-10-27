@@ -1,0 +1,95 @@
+.search-bar {
+    position: relative;
+    flex: 1.5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+}
+
+.search-bar.expanded #search-input {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-result-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: linear-gradient(230deg, #9df1ed6e, #6000DE50);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: 62px;
+    background-color: #ffffff16;
+    flex: 1;
+    width: 100%;
+    padding: 3px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    border: 2px solid #9747FF;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    border-top: none;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Custom scrollbar for WebKit-based browsers */
+.search-results::-webkit-scrollbar {
+    width: 12px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #0000;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #6000DE;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Custom scrollbar for Firefox */
+.search-results {
+    scrollbar-width: thin;
+    scrollbar-color: #6000DE #0000;
+}
+
+.search-results::-moz-scrollbar-track {
+    background: #0000;
+    /* Background of the scrollbar track */
+}
+
+.search-results::-moz-scrollbar-thumb {
+    background: #6000DE;
+    /* Color of the scrollbar thumb */
+}
+
+.search-results::-moz-scrollbar-thumb:hover {
+    background: #555;
+}
